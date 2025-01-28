@@ -24,4 +24,4 @@ You'll want to fill the associated fields with the addresses generated from the 
 - TOKEN_MINT_ACCOUNT
 
 3. Launch frontend
-`npm run dev`# solana_crowdsale_frontend
+`npm run dev`

@@ -100,3 +100,62 @@ a {
   place-items: center;
 }
 
+.hero {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  justify-content: center;
+  text-align: center;
+}
+
+.analytics {
+  width: 100%;
+  min-height: 400px;
+
+  background-color: var(--blue);
+  padding: 2em;
+
+  border: 1px solid var(--white);
+  border-radius: 12px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+
+.analytics h2 {
+  grid-row: 1;
+  grid-column: 1 / span 12;
+  letter-spacing: -1px;
+}
+
+
+
+/* --- MAIN ANALYTICS STYLES --- */
+
+.analytics {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 2em;
+}
+
+.analytics__program,
+.analytics__user {
+  grid-column: 3 / 11;
+
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+}
+
+.analytics__program h4,
+.analytics__user h4 {
+  font-weight: 300;
+}
+
+.analytics__program p,
+.analytics__user p {
+  font-weight: 700;
+}
+
+

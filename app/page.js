@@ -4,12 +4,14 @@ import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js"
 import { getAssociatedTokenAddressSync } from "@solana/spl-token"
 import { AnchorProvider, Program } from "@coral-xyz/anchor"
 
+
 // Import config & IDL
 import config from "@/app/config.json"
 import Crowdsale from "@/app/idl/crowdsale.json"
 
 // Import components
 import Header from "./components/Header"
+import Analytics from "./components/Analytics"
 
 export default function Home() {
   const [provider, setProvider] = useState(null)
@@ -109,6 +111,13 @@ export default function Home() {
           <h1>Introducing sDAPP</h1>
           <p>Join our community today!</p>
         </div>
+
+        <Analytics
+        userBalance={userBalance}
+        userTokenBalance={userTokenBalance}
+        crowdsaleBalance={crowdsaleBalance}
+        crowdsaleTokenBalance={crowdsaleTokenBalance}
+        />
       </main >
     </div >
   );

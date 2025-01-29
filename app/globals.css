@@ -107,6 +107,7 @@ a {
   text-align: center;
 }
 
+.buy,
 .analytics {
   width: 100%;
   min-height: 400px;
@@ -122,14 +123,41 @@ a {
   grid-template-rows: auto 1fr;
 }
 
-
+.buy h2,
 .analytics h2 {
   grid-row: 1;
   grid-column: 1 / span 12;
   letter-spacing: -1px;
 }
 
+/* --- MAIN FORM STYLES */
 
+.buy form {
+  grid-row: 2;
+  grid-column: 3 / 11;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.buy form input[type="number"] {
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 6px;
+
+  width: 200px;
+  height: 50px;
+  padding: 1em;
+}
+
+.buy p {
+  grid-row: 3;
+  grid-column: 3 / 9;
+}
 
 /* --- MAIN ANALYTICS STYLES --- */
 
@@ -157,5 +185,3 @@ a {
 .analytics__user p {
   font-weight: 700;
 }
-
-

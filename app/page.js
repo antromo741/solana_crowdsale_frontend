@@ -4,13 +4,13 @@ import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js"
 import { getAssociatedTokenAddressSync } from "@solana/spl-token"
 import { AnchorProvider, Program } from "@coral-xyz/anchor"
 
-
 // Import config & IDL
 import config from "@/app/config.json"
 import Crowdsale from "@/app/idl/crowdsale.json"
 
 // Import components
 import Header from "./components/Header"
+import Buy from "./components/Buy"
 import Analytics from "./components/Analytics"
 
 export default function Home() {
@@ -102,7 +102,6 @@ export default function Home() {
     getProvider()
   }, [])
 
-
   return (
     <div className="page">
       <Header provider={provider} user={user} setUser={setUser} />
@@ -112,11 +111,21 @@ export default function Home() {
           <p>Join our community today!</p>
         </div>
 
+        <Buy
+          crowdsaleCost={crowdsaleCost}
+          crowdsaleProgram={crowdsaleProgram}
+          user={user}
+          provider={provider}
+          anchorProvider={anchorProvider}
+          getUserBalance={getUserBalance}
+          getCrowdsaleBalance={getCrowdsaleBalance}
+        />
+
         <Analytics
-        userBalance={userBalance}
-        userTokenBalance={userTokenBalance}
-        crowdsaleBalance={crowdsaleBalance}
-        crowdsaleTokenBalance={crowdsaleTokenBalance}
+          userBalance={userBalance}
+          userTokenBalance={userTokenBalance}
+          crowdsaleBalance={crowdsaleBalance}
+          crowdsaleTokenBalance={crowdsaleTokenBalance}
         />
       </main >
     </div >

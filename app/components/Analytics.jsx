@@ -12,7 +12,7 @@ export default function Analytics({
       <div className="analytics__program">
         <h3>Fundraiser Stats</h3>
         <hr />
-        <Stat title={"Tokens Availbe"} stat={crowdsaleTokenBalance} />
+        <Stat title={"Tokens Available"} stat={crowdsaleTokenBalance} />
 
         <Stat title={"Total Sol Raised"} stat={crowdsaleBalance} />
       </div>

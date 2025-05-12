@@ -1,5 +1,7 @@
 # Solana Crowdsale 
 
+DevNet tokens: https://faucet.solana.com/
+
 ## Technology Stack & Tools
 - Javascript (Unit testing)
 - [NPM](https://www.npmjs.com/) (Package manager)
